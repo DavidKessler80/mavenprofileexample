@@ -13,3 +13,9 @@ Powershell
 ## To note...
 
 It is important that you utilize the classloader to load the configuration file.
+
+`
+	public void loadProperties() throws IOException {
+		//FileInputStream fileInputStream = new FileInputStream("src/main/resources/config.properties");
+		InputStream is = this.getClass().getClassLoader().getResourceAsStream("config.properties");
+`
